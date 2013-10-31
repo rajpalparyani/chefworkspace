@@ -10,6 +10,15 @@ package "apache2" do
 	action :install
 end
 
+execute "a2dissite default" do
+	only_if do
+		File.symlink?(:wq
+
+	end
+end
+
+
+
 service "apache2" do
 	action [ :enable, :start ]
 end
